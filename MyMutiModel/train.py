@@ -3,7 +3,8 @@ import torch
 import torch.nn as nn
 from tqdm import tqdm
 from MutiModel import model
-from Dataset import dataloader,validDataloader
+# from Dataset import dataloader,validDataloader
+from flickr8kDataset import dataloader,validDataloader
 # 定义损失函数和优化器
 criterion = nn.BCEWithLogitsLoss()
 optimizer = optim.AdamW(model.parameters(), lr=2e-5)
