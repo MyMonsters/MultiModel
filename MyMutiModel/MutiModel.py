@@ -32,7 +32,7 @@ class MultiModalModel(nn.Module):
         return x
 
 # 初始化模型
-vit_model = ViTModel.from_pretrained('../ViTProcessor')
-bert_model = BertModel.from_pretrained('../bert')
+vit_model = ViTModel.from_pretrained('/input/ViTProcessor')
+bert_model = BertModel.from_pretrained('/input/bert')
 model = MultiModalModel(vit_model, bert_model, hidden_dim=512)
 model.to('cuda' if torch.cuda.is_available() else 'cpu')
